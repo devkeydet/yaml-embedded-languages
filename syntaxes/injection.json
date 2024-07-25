@@ -1372,6 +1372,25 @@
           "patterns": [
             {
               "include": "source.js"
+            },
+            {
+              "begin": "\\$\\{",
+              "end": "\\}",
+              "beginCaptures": {
+                "0": {
+                  "name": "punctuation.definition.string.begin.powerfx"
+                }
+              },
+              "endCaptures": {
+                "0": {
+                  "name": "punctuation.definition.string.end.powerfx"
+                }
+              },
+              "patterns": [
+                {
+                  "include": "source.js"
+                }
+              ]
             }
           ]
         }

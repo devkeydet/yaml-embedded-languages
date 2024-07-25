@@ -60,6 +60,16 @@ The following list shows all valid identifiers for the built-in languages:
 - xml
 - yaml (Yes, YAML within YAML!)
 
+### Power Fx String Interpolation
+
+Power Fx string interpolation is supported, including the use of dollar sign prefix and curly braces for embedded formulas. For example:
+
+```powerfx
+$"Hello {User().FullName}"
+```
+
+To include a curly brace in the text string, use repeated curly braces: `{{` or `}}`.
+
 ## Requirements
 
 None
