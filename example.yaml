@@ -2,3 +2,4 @@ example: | # powerfx
   // PowerFx code example
   Set(varGreeting, "Hello World!");
   Set(varResult, Text(varGreeting));
+  Set(varInterpolated, $:"The greeting is {varGreeting}");
