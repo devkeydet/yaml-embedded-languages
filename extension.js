@@ -92,7 +92,7 @@ const getRepository = (languages) => {
     entries.map(([name, scopeName]) => [
       `${name}-${REPOSITORY_SUFFIX}`,
       {
-        begin: `(?i)(?:(\\|)|(>))([1-9])?([-+])?[ \t]+(#[ \t]*(?:${name})[ \t]*\\n)`,
+        begin: `(?i)(?:(\\|)|(>))([1-9])?([-+])?[ \t]+(=[ \t]*(?:${name})[ \t]*\\n)`,
         beginCaptures: {
           1: {
             name: "keyword.control.flow.block-scalar.literal.yaml",
@@ -109,7 +109,7 @@ const getRepository = (languages) => {
           5: {
             patterns: [
               {
-                begin: "#",
+                begin: "=",
                 beginCaptures: {
                   0: { name: "punctuation.definition.comment.yaml" },
                 },
