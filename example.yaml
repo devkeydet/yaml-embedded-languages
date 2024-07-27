@@ -1,4 +1,4 @@
-example: | # powerfx
+example: | =
   // PowerFx code example
   Set(varGreeting, "Hello World!");
   Set(varResult, Text(varGreeting));
