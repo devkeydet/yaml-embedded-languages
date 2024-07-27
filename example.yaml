@@ -1,5 +1,9 @@
-example: | =
+example: | = de example
+  Set(varGreeting, "Hello World!");
+  Set(varResult, Text(varGreeting));
+
+example_newline:
+  = powerfx
   // PowerFx code example
   Set(varGreeting, "Hello World!");
   Set(varResult, Text(varGreeting));
-  Set(varInterpolated, $:"The greeting is {varGreeting}");

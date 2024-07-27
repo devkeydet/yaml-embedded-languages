@@ -129,6 +129,33 @@ const getRepository = (languages) => {
           },
         ],
       },
+      `${name}-${REPOSITORY_SUFFIX}-newline`,
+      {
+        begin: `(?i)(?:(\\|)|(>))([1-9])?([-+])?[ \t]*\\n[ \t]*=(?:${name})[ \t]*\\n`,
+        beginCaptures: {
+          1: {
+            name: "keyword.control.flow.block-scalar.literal.yaml",
+          },
+          2: {
+            name: "keyword.control.flow.block-scalar.folded.yaml",
+          },
+          3: {
+            name: "constant.numeric.indentation-indicator.yaml",
+          },
+          4: {
+            name: "storage.modifier.chomping-indicator.yaml",
+          },
+        },
+        end: "^(?=\\S)|(?!\\G)",
+        patterns: [
+          {
+            begin: "^([ ]+)(?! )",
+            end: "^(?!\\1|\\s*$)",
+            name: `${LANGUAGE_SCOPE_PREFIX}.${name}`,
+            patterns: [{ include: scopeName }],
+          },
+        ],
+      },
     ]),
   );
 };
