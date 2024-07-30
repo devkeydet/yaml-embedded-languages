@@ -10,55 +10,9 @@
 
 ## Features
 
-Syntax highlighting within YAML block-scalars for [40+ built-in languages](#built-in-languages "Built-In Languages") and the ability to add highlighting for any other language with the [yaml-embedded-languages.include](#extension-settings "Extension Settings") configuration setting.
+Syntax highlighting within YAML block-scalars for powerfx and the ability to add highlighting for any other language with the [yaml-embedded-languages.include](#extension-settings "Extension Settings") configuration setting.
 
 ![Example yaml file showing syntax highlighting](https://raw.githubusercontent.com/harrydowning/yaml-embedded-languages/master/images/example.png)
-
-### Built-In Languages
-
-The following list shows all valid identifiers for the built-in languages:
-
-- c
-- clojure
-- coffee
-- cpp or c++
-- csharp
-- css
-- diff
-- dockerfile
-- dosbatch
-- fsharp
-- go
-- groovy
-- html
-- java
-- javascript or js
-- json
-- tex or latex
-- lua
-- makefile
-- markdown
-- objc
-- perl
-- pip or requirements
-- powerfx
-- powershell
-- properties
-- python or py
-- r
-- regex
-- ruby
-- rust
-- scss
-- shaderlab
-- shell
-- slim
-- sql
-- swift
-- typescript or ts
-- tsx
-- xml
-- yaml (Yes, YAML within YAML!)
 
 ## Requirements
 

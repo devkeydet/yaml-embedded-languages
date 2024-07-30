@@ -1,15 +1,4 @@
-example1: | # python
-  print('Hello World!')
-
-example2: | # java
-  class HelloWorld {
-    public static void main(String[] args) {
-        System.out.println("Hello World!"); 
-    }
-  }
-
-example3: | # js
-  console.log('Hello World!')
-
-example4: | # regex
-  [Hh]ello [Ww]orld!?
+example1: | # powerfx
+  // This is a PowerFx example
+  Set(varHelloWorld, "Hello World!");
+  Text(varHelloWorld)
