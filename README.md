@@ -20,69 +20,7 @@ The following list shows all valid identifiers for the built-in languages:
 
 | Language         | Identifier            |
 | ---------------- | --------------------- |
-| bat              | `bat`                 |
-| bibtex           | `bibtex`              |
-| c                | `c`                   |
-| clojure          | `clojure`             |
-| coffeescript     | `coffee`              |
-| cpp              | `cpp`, `c++`          |
-| csharp           | `csharp`, `c#`        |
-| css              | `css`                 |
-| cuda-cpp         | `cuda`                |
-| dart             | `dart`                |
-| diff             | `diff`                |
-| dockercompose    | `dockercompose`       |
-| dockerfile       | `dockerfile`          |
-| fsharp           | `fsharp`, `f#`        |
-| go               | `go`                  |
-| groovy           | `groovy`              |
-| handlebars       | `handlebars`          |
-| hlsl             | `hlsl`                |
-| html             | `html`                |
-| ini              | `ini`                 |
-| jade             | `jade`                |
-| java             | `java`                |
-| javascript       | `js`, `javascript`    |
-| javascriptreact  | `jsx`                 |
-| json             | `json`                |
-| jsonc            | `jsonc`               |
-| jsonl            | `jsonl`               |
-| julia            | `julia`               |
-| latex            | `latex`               |
-| less             | `less`                |
-| log              | `log`                 |
-| lua              | `lua`                 |
-| makefile         | `make`, `makefile`    |
-| markdown         | `markdown`            |
-| markdown-math    | `math`                |
-| objective-c      | `objc`                |
-| objective-cpp    | `objcpp`              |
-| perl             | `perl`                |
-| php              | `php`                 |
-| pip-requirements | `pip`, `requirements` |
 | powerfx\*        | `powerfx`             |
-| powershell       | `powershell`          |
-| properties       | `properties`          |
-| python           | `py`, `python`        |
-| r                | `r`                   |
-| raku             | `raku`                |
-| razor            | `razor`               |
-| regex\*          | `regex`               |
-| restructuredtext | `rst`                 |
-| ruby             | `ruby`                |
-| rust             | `rust`                |
-| scss             | `scss`                |
-| shaderlab        | `shaderlab`           |
-| shellscript      | `shell`               |
-| sql              | `sql`                 |
-| swift            | `swift`               |
-| tex              | `tex`                 |
-| typescript       | `ts`, `typescript`    |
-| typescriptreact  | `tsx`                 |
-| vb               | `vb`                  |
-| xml              | `xml`                 |
-| xsl              | `xsl`                 |
-| yaml             | `yaml`                |
 
 \*_Not a valid VS Code language_
 
