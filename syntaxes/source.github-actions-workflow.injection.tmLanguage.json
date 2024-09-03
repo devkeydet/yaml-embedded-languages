@@ -1491,7 +1491,7 @@
       ]
     },
     {
-      "begin": "(?i)(?:(\\|)|(>))([1-9])?([-+])?\\s+(#\\s*(?:powerfx)\\s*\\n)",
+      "begin": "(?i)(?:(\\|)|(>))([1-9])?([-+])?\\s+(=\\s*\\n|=)",
       "beginCaptures": {
         "1": {
           "name": "keyword.control.flow.block-scalar.literal.yaml"
