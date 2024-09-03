@@ -1,2 +1,5 @@
 powerfx-example: |
   =Notify("Hello, World!")
+
+block-scalar-example: |
+  =Set(gblFoo,"xxx");
