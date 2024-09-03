@@ -1506,6 +1506,21 @@
       ]
     },
     {
+      "begin": "(?<=\\|\\s*\\n)\\s*=",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.operator.assignment.yaml"
+        }
+      },
+      "end": "(?=\\s|$)",
+      "name": "meta.embedded.inline.powerfx",
+      "patterns": [
+        {
+          "include": "source.js"
+        }
+      ]
+    },
+    {
       "begin": "(?i)(?:(\\|)|(>))([1-9])?([-+])?\\s+(#\\s*(?:powershell)\\s*\\n)",
       "beginCaptures": {
         "1": {
