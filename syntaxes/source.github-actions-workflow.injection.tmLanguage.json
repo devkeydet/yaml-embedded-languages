@@ -1491,35 +1491,17 @@
       ]
     },
     {
-      "begin": "(?i)(?:(\\|)|(>))([1-9])?([-+])?\\s+(#\\s*(?:powerfx)\\s*\\n)",
+      "begin": "(?<=:\\s*)=",
       "beginCaptures": {
-        "1": {
-          "name": "keyword.control.flow.block-scalar.literal.yaml"
-        },
-        "2": {
-          "name": "keyword.control.flow.block-scalar.folded.yaml"
-        },
-        "3": {
-          "name": "constant.numeric.indentation-indicator.yaml"
-        },
-        "4": {
-          "name": "storage.modifier.chomping-indicator.yaml"
-        },
-        "5": {
-          "name": "entity.name.type.yaml"
+        "0": {
+          "name": "keyword.operator.assignment.yaml"
         }
       },
-      "end": "^(?=\\S)|(?!\\G)",
+      "end": "(?=\\s|$)",
+      "name": "meta.embedded.inline.powerfx",
       "patterns": [
         {
-          "begin": "(?>^|\\G)([ ]+)(?! )",
-          "end": "^(?!\\1|\\s*$)",
-          "name": "meta.embedded.inline.powerfx",
-          "patterns": [
-            {
-              "include": "source.js"
-            }
-          ]
+          "include": "source.js"
         }
       ]
     },

@@ -16,7 +16,7 @@ export class InjectionGrammar extends Writable {
 
   #getPatterns() {
     const entries = Object.entries(this.languages);
-    return entries.map(([id, { scopeName, stripIndent }]) => ({
+    const patterns = entries.map(([id, { scopeName, stripIndent }]) => ({
       begin: `(?i)(?:(\\|)|(>))([1-9])?([-+])?\\s+(#\\s*(?:${id})\\s*\\n)`,
       beginCaptures: {
         1: {
@@ -46,6 +46,21 @@ export class InjectionGrammar extends Writable {
         },
       ],
     }));
+
+    // Add pattern for property values starting with '='
+    patterns.push({
+      begin: `(?<=:\\s*)=`,
+      beginCaptures: {
+        0: {
+          name: "keyword.operator.assignment.yaml",
+        },
+      },
+      end: "(?=\\s|$)",
+      name: `${this.embeddedScopeNamePrefix}.powerfx`,
+      patterns: [{ include: "source.js" }],
+    });
+
+    return patterns;
   }
 
   valueOf() {
