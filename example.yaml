@@ -1,2 +1,2 @@
-powerfx-example: | # powerfx
+powerfx-example: |
   =Notify("Hello, World!")
