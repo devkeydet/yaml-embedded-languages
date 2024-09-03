@@ -1491,7 +1491,7 @@
       ]
     },
     {
-      "begin": "(?<=:\\s*)=",
+      "begin": "(?<=:\\s*)=\\s*",
       "beginCaptures": {
         "0": {
           "name": "keyword.operator.assignment.yaml"

@@ -49,7 +49,7 @@ export class InjectionGrammar extends Writable {
 
     // Add pattern for property values starting with '='
     patterns.push({
-      begin: `(?<=:\\s*)=`,
+      begin: `(?<=:\\s*)=\\s*`,
       beginCaptures: {
         0: {
           name: "keyword.operator.assignment.yaml",
