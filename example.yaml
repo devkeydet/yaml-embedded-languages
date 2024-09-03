@@ -367,3 +367,6 @@ xsl-example: | # xsl
 
 yaml-example: | # yaml
   message: Hello, World!
+
+powerfx-example-with-equal-sign: |
+  =Notify("Hello, World!")

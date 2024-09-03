@@ -60,6 +60,19 @@ export class InjectionGrammar extends Writable {
       patterns: [{ include: "source.js" }],
     });
 
+    // Add pattern to apply powerfx formatting based on the first character of the first line being '='
+    patterns.push({
+      begin: `(?<=\\|\\s*\\n)\\s*=`,
+      beginCaptures: {
+        0: {
+          name: "keyword.operator.assignment.yaml",
+        },
+      },
+      end: "(?=\\s|$)",
+      name: `${this.embeddedScopeNamePrefix}.powerfx`,
+      patterns: [{ include: "source.js" }],
+    });
+
     return patterns;
   }
 
