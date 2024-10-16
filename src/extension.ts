@@ -5,6 +5,7 @@ import {
   LANGUAGES,
   SUB_INCLUDE_CONFIG,
   VERSION_STATE,
+  SOME_SETTING_NAME,
 } from "./constants";
 import { generateFiles } from "./generate";
 
@@ -12,6 +13,12 @@ const updateExtension = () => {
   const settings = vscode.workspace.getConfiguration(packageJson.name);
   const includeLanguages = settings[SUB_INCLUDE_CONFIG];
   const allLanguages = { ...LANGUAGES, ...includeLanguages };
+
+  const someSettingName = settings.get(SOME_SETTING_NAME, []);
+  someSettingName.forEach((setting) => {
+    const { path, language } = setting;
+    // Add logic to handle the path and language settings
+  });
 
   const filesChanged = generateFiles(allLanguages);
 
@@ -36,7 +43,7 @@ export const activate = (context: vscode.ExtensionContext) => {
   }
 
   const disposable = vscode.workspace.onDidChangeConfiguration((event) => {
-    if (event.affectsConfiguration(INCLUDE_CONFIG)) {
+    if (event.affectsConfiguration(INCLUDE_CONFIG) || event.affectsConfiguration(SOME_SETTING_NAME)) {
       updateExtension();
     }
   });

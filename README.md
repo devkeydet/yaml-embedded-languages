@@ -120,6 +120,7 @@ None
 | Name                              | Description                                                                                                                                                                                                                                                                                                                                                                           |
 | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `yaml-embedded-languages.include` | An object where the key defines the language identifier with regex and the value specifies the language TextMate scope name. By default the language identifier will be used as the language name. To change this, the value can be specified as an object with properties including `name`, `scopeName` (required), and `stripIndent`. Hover over these in VS Code to find out more. |
+| `yaml-embedded-languages.someSettingName` | An array of objects specifying file path patterns and corresponding language identifiers for syntax highlighting. |
 
 ## Known Issues
 
